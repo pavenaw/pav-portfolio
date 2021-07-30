@@ -40,7 +40,3 @@ menuLinks.forEach(
     menuLink.addEventListener("click", toggleMenu)
   }
 )
-
-
-/* Do i add this?
- (P ● æ ● vi: ● na:) */

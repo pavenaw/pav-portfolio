@@ -86,10 +86,6 @@ footer {
         @include bodyBase();
     }
 
-    #grain1 {
-        min-height: 100vh;
-    }
-
     #hello {
         font-size: 0.6em;
     }
@@ -213,11 +209,6 @@ footer {
         max-width: 70vw;
         height:300px;    
     }
-
-    main#grain2 {
-        @include fullscreen(100vh);
-    }
-
     header {
         background-color: rgb(255, 255, 255);
         display: flex;
