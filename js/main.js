@@ -13,29 +13,6 @@ cursor.classList.add("colorChange");
   }, 200)
 });
 
-//Grain animation params
-var options = {
-    "animate": true,
-    "patternWidth": 600,
-    "patternHeight": 600,
-    "grainOpacity": 0.1,
-    "grainDensity": 1,
-    "grainWidth": 0.7,
-    "grainHeight": 0.7,
-  }
-
-  var optionsMobile = {
-    "animate": false,
-    "patternWidth": 600,
-    "patternHeight": 600,
-    "grainOpacity": 0.1,
-    "grainDensity": 1,
-    "grainWidth": 0.7,
-    "grainHeight": 0.7,
-  }
-grained("#grain1", options);
-grained("#grain2", options);
-
 //Hamburger menu
 var menu = document.querySelector(".links");
 var ham =  document.querySelector(".s-sidebar__trigger");
