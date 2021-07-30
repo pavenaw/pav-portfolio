@@ -1,0 +1,246 @@
+/* Import fonts */
+@font-face {
+    src: url(../fonts/NHaasGroteskTXPro-65Md.ttf);
+    src: url(../fonts/NHaasGroteskTXPro-65Md.eot);
+    src: url(../fonts/NHaasGroteskTXPro-65Md.woff);
+    font-family: nHaasMd;
+}
+
+/* Import all scss files */
+@import './variables';
+@import './reset';
+@import './nav';
+@import './transitions';
+@import './work';
+@import './contact';
+
+
+/*Mixins */
+
+@mixin bodyBase {
+    font-family: nHaasMd;
+    font-size: 1em;
+    color:$notBlack;
+    // background: linear-gradient(-90deg, #474678, #DCAFC1, #ffffff, #b5cab6, #294543);
+    background: linear-gradient(-90deg, #8b3275, #474678, #2c3f7c, #215c48, #294543);
+    background-size: 400% 400%;
+    animation: gradient 25s ease infinite;
+}
+
+@mixin fullscreen ($height) {
+    width: 100%;
+    height:$height;
+}
+
+@mixin glow {
+    color:white;
+    text-shadow:
+    0 0 20px #fff,
+    0 0 100px rgb(36, 202, 105); 
+}
+
+@mixin socials {
+    display: flex;
+    justify-content: center;
+    z-index:10;
+}
+
+/* Universal styles */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.socials {
+    @include socials();   
+    filter: drop-shadow( 0px 0px 5px rgba(255, 255, 255, 0.7));
+    z-index: 0;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 801px ) {
+
+    html {
+        letter-spacing: 0.7px;
+    }
+
+    h1 {
+        padding: $mobileSpc;
+        padding-top:40%;
+        @include glow();
+        z-index: 1;
+    }
+
+    .socials * {
+        width:50px;
+        padding:2px;
+    }    
+
+    body {
+        @include bodyBase();
+    }
+
+    #grain1 {
+        min-height: 100vh;
+    }
+
+    #hello {
+        font-size: 0.6em;
+    }
+
+    #pav {
+        display: block;
+        font-size: 1.3em;
+        padding-top: $intro;
+    }
+
+    #pronounce {
+        display: block;
+    }
+    #multid {
+        display: block;
+        font-size: 0.6em;
+        padding-top: $intro;
+        color:$purple;
+    }
+
+    #blurb {
+        display: block;
+        font-size:0.4em;
+        padding-top:$intro;
+        font-family: 'Inter', sans-serif;
+        line-height: 15px;
+    }
+
+
+}
+
+/* tablets */ 
+
+@media (min-width: 480px) {
+    #pav {
+        display: block;
+        font-size: 1.5em;
+        padding-top: $intro;
+    }
+
+    #multid {
+        display: block;
+        font-size: 0.8em;
+        padding-top: $intro;
+        color:$purple;
+    }
+
+    #blurb {
+        display: block;
+        font-size:0.6em;
+        padding-top:$intro;
+        font-family: 'Inter', sans-serif;
+        line-height: 15px;
+    }
+
+    .socials * {
+        width:70px;
+        padding:5px;
+    }
+
+}
+
+@media (min-width: 801px) and (max-width:1250px) {
+
+    #pronounce {
+        display: block;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 801px){
+
+    html {
+        letter-spacing: 2px;
+    }
+
+    #hello {
+        font-size: 0.5em;
+    }
+
+    #pav {
+        display: block;
+        font-size: 1.4em;
+        padding-top: $intro;
+    }
+
+    #multid {
+        display: block;
+        font-size: 0.5em;
+        padding-top: $intro;
+        color:$purple;
+    }
+
+    #blurb {
+        display: block;
+        font-size:0.3em;
+        padding-top:1%;
+        font-family: 'Inter', sans-serif;
+    }
+
+    body{
+        @include bodyBase();
+        scroll-behavior: smooth;
+    }
+
+    .container-1 {
+        min-height: 100vh;
+    }
+
+    .section-1 {
+        display: flex;
+        justify-content: center;
+        padding: $dsktpSpc;
+        border-radius: 10px;
+    }
+  
+    section.section-1 {
+        padding:0;
+        margin:0 auto;
+        margin-top:10%;
+        max-width: 70vw;
+        height:300px;    
+    }
+
+    main#grain2 {
+        @include fullscreen(100vh);
+    }
+
+    header {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        color:#779479;
+    }
+
+    h1 {    
+        font-size: 3em;
+        z-index: 1;
+        @include glow();
+    }
+
+    .cursor {
+        width:60px;
+        height:60px;
+        border: 3px solid white;
+        position: fixed;
+        border-radius: 50%;
+        z-index: 1000;
+        pointer-events: none;
+    }
+
+    .colorChange {
+        border: 3px solid #7137ce;
+    }
+}

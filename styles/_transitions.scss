@@ -1,0 +1,99 @@
+/* Gradient background */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Gradient text */ 
+
+@keyframes gradientText {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+nav {
+    animation: fadeInNav 2s ease-in-out;
+}
+
+main {
+    animation: fadeInMain 2s ease-in-out;
+}
+
+footer {
+    animation: fadeInFooter 2s ease-in-out;
+}
+
+
+@keyframes fadeInNav {
+    0% {
+       opacity: 0;
+       transform: translateY(-100px);
+       
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+}
+
+ 
+@keyframes fadeInMain {
+    0% {
+       opacity: 0;
+       
+    }
+
+    50% {
+       opacity: 0;   
+       transform: translateY(-50px);
+    }
+
+    100% {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+ @keyframes fadeInNav {
+    0% {
+       opacity: 0;
+       transform: translateY(-100px);
+       
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+
+ @keyframes fadeInFooter {
+    0% {
+       opacity: 0;
+       
+    }
+
+    65% {
+       opacity: 0;   
+       transform: translateY(-50px);
+    }
+
+    100% {
+        opacity:1;
+        transform: translateY(0);
+    }
+}

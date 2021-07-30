@@ -1,0 +1,57 @@
+/* Mobile Styles */
+@media (max-width: 801px ) {
+    .main  {
+        display: flex;
+        align-items: center;
+        height: 400px;
+        text-align: center;
+        justify-content: center;
+    }
+    .section-2 {
+        width:100%;
+        a {
+            position: relative;
+            width: 100%;
+            color:$mainTextColor;
+            font-size: 1em;
+            padding: 0px 3px;
+            @include glow();
+            flex:1;
+            word-break:break-all;
+        }
+        #contact {
+
+            padding: 40% 0 0 0;
+        }
+    }
+
+}
+
+/* Tablets */
+
+@media (min-width: 801px){
+
+    .main  {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .section-2 {
+        width:100%;
+        margin-top:10%;
+        a {
+            position: relative;
+            width: 100%;
+            color:$mainTextColor;
+            font-size: 1.8em;
+            padding: 0px 3px;
+            @include glow();
+            flex:1;
+            word-break:break-all;
+        }
+        #contact {
+            padding:0;
+        }
+    }
+}
